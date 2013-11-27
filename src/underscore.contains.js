@@ -26,9 +26,28 @@ define(['underscore'], function (_) {
 		});
 	}
 
+	function exclusiveBetween(boundaries, item) {
+		return boundaries[0] < item && item < boundaries[1];
+	}
+
+	function inclusiveBetween(boundaries, item) {
+		return boundaries[0] <= item && item <= boundaries[1];
+	}
+
+	function between(boundaries, item, exclusive) {
+		// determine which operator to use.
+		var operator = exclusive ? exclusiveBetween : inclusiveBetween;
+
+		// curry operator
+		operator = _.partial(operator, boundaries);
+
+		return _.isArray(item) ? _.every(item, operator) : operator(item);
+	}
+
 	_.mixin({
 		containsAll: containsAll,
-		containsAny: containsAny
+		containsAny: containsAny,
+		between: between
 	});
 
 	return _;

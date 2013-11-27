@@ -94,7 +94,7 @@ module.exports = function (grunt) {
 					// module name
 					name: 'underscore.contains',
 					// output here
-					out: 'built/underscore.contains.built.js',
+					out: 'built/underscore.contains.js',
 					// config file
 					mainConfigFile: 'amdconfig.js',
 

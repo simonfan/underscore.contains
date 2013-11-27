@@ -2,7 +2,7 @@ define(['underscore.contains'], function(_) {
 
 	return function() {
 
-	    module('Base');
+	    module('Contains');
 
 	    test('containsAll', function() {
 	        var container = ['a','b','e','ffff'];
