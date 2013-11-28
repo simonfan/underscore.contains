@@ -1,6 +1,6 @@
 {
   "name": "underscore.contains",
-  "name": "./src/underscore.contains",
+  "main": "./src/underscore.contains",
   "version": "0.0.0",
   "dependencies": {
     "amdefine": ">=0.1.0",
